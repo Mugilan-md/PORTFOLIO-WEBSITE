@@ -71,9 +71,9 @@ export default function About() {
                 {/* Profile Photo Area */}
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-6 bg-zinc-900 border border-white/10 group-hover:border-[#FF2A2A] transition-colors">
                   <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
+                    src="/mugilan-passport.png"
                     alt="B. MUGILAN Profile Pass"
-                    className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end">

@@ -3,7 +3,10 @@ import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
 import ProcessTimeline from './components/ProcessTimeline';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -21,16 +24,25 @@ export default function App() {
         {/* Floating Navbar */}
         <Navbar />
 
-        {/* Fullscreen Video Hero Section */}
+        {/* Fullscreen Video Hero Section (#hero) */}
         <Hero />
 
-        {/* Vibrant Red Hanging ID Badge About Section */}
+        {/* Vibrant Red Hanging ID Badge About Section (#about) */}
         <About />
 
-        {/* Process Timeline (How We Work) Section */}
+        {/* Editorial Selected Works Showcase (#projects) */}
+        <Projects />
+
+        {/* Dark Glassmorphism Technical Stack Grid (#skills) */}
+        <Skills />
+
+        {/* Process Timeline (How We Work) Section (#process) */}
         <ProcessTimeline />
 
-        {/* Editorial Dark Footer */}
+        {/* High-Converting Direct Consultation Hub (#contact) */}
+        <Contact />
+
+        {/* Editorial Dark Footer (#footer) */}
         <Footer />
       </div>
     </div>

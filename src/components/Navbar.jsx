@@ -6,9 +6,9 @@ import confetti from 'canvas-confetti';
 const navItems = [
   { name: 'Home', href: '#hero' },
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#about' },
-  { name: 'Projects', href: '#process' },
-  { name: 'Contact', href: '#footer' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -37,9 +37,9 @@ export default function Navbar() {
       colors: ['#FF2A2A', '#ffffff', '#111111']
     });
 
-    const footer = document.querySelector('#footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    const contact = document.querySelector('#contact');
+    if (contact) {
+      contact.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
