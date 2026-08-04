@@ -12,65 +12,64 @@ const Github = (props) => (
 const categories = [
   { id: 'all', label: 'All Works' },
   { id: 'fullstack', label: 'Full-Stack Apps' },
-  { id: 'video', label: 'Video & Motion Reels' },
   { id: 'ai', label: 'AI & Cloud Systems' },
 ];
 
 const projects = [
   {
     id: 1,
-    title: 'Nexus Stream AI',
-    category: 'fullstack',
-    categoryLabel: 'Full-Stack App',
-    description: 'High-throughput video streaming platform with real-time AI metadata indexing and interactive analytics dashboard.',
-    longDescription: 'Nexus Stream AI combines custom HLS video streaming pipelines with Google Gemini vision API to auto-generate timestamped video chapters, automated captions, and engagement heatmaps in real-time.',
-    tags: ['React 19', 'Node.js', 'Tailwind CSS', 'Framer Motion', 'Gemini API'],
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+    title: 'Agentic AI Weather Monitoring System',
+    category: 'ai',
+    categoryLabel: 'AI & Cloud Systems',
+    description: 'Enterprise-grade Agentic AI Weather System featuring a 5-Agent Pipeline, Scikit-Learn ML Risk & Anomaly Engines, WebGL 3D visuals, and an interactive Assistant.',
+    longDescription: 'An advanced weather intelligence platform engineered with a multi-agent orchestration architecture. Incorporates real-time anomaly detection models trained via Scikit-Learn, WebGL 3D atmospheric shaders, SQLite persistence, and a conversational AI copilot.',
+    tags: ['Python', 'Scikit-Learn', 'Agentic AI', 'WebGL 3D', 'SQLite', 'React.js'],
+    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1200&auto=format&fit=crop',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-code-coding-on-a-computer-screen-41551-large.mp4',
-    githubUrl: 'https://github.com/Mugilan-md',
-    liveUrl: '#hero',
+    githubUrl: 'https://github.com/Mugilan-md/Agentic-AI-Weather-Monitoring-System',
+    liveUrl: 'https://agentic-ai-wms.vercel.app',
     featured: true,
   },
   {
     id: 2,
-    title: 'Cinematic 4K Master Reel',
-    category: 'video',
-    categoryLabel: 'Video Production',
-    description: 'Agency-grade 60-second video showcase featuring custom 3D motion graphics, speed ramping, and spatial audio design.',
-    longDescription: 'Crafted for high-end tech launches, this reel blends raw 4K cinema camera footage with DaVinci Resolve color grading, custom After Effects particle systems, and rhythmic sound design.',
-    tags: ['After Effects', 'Premiere Pro', 'DaVinci Resolve', '4K Cinema', 'Sound Design'],
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-with-green-screen-41220-large.mp4',
-    githubUrl: 'https://github.com/Mugilan-md',
-    liveUrl: '#hero',
+    title: 'EduTwin AI - Student Digital Twin Platform',
+    category: 'ai',
+    categoryLabel: 'AI & Machine Learning',
+    description: 'AI-powered Student Digital Twin platform centralizing academic records, profile management, certificate verification, and intelligent ML career insights.',
+    longDescription: 'EduTwin AI transforms student record management by constructing holistic digital twin models. Features secure academic verification pipelines, faculty review workflows, certificate auditing, and predictive machine learning models for career readiness and skill mapping.',
+    tags: ['TypeScript', 'React.js', 'Machine Learning', 'Digital Twin', 'Node.js', 'Vite'],
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-41552-large.mp4',
+    githubUrl: 'https://github.com/Mugilan-md/Edutwin-AI',
+    liveUrl: 'https://edutwin-ai-mu.vercel.app',
     featured: true,
   },
   {
     id: 3,
-    title: 'Aether Luxury Web Architecture',
+    title: 'Serverless Event Registration & Pass Portal',
     category: 'fullstack',
     categoryLabel: 'Full-Stack App',
-    description: 'Ultra-fast web platform built for high-end digital brands with glassmorphic UIs and sub-second page transitions.',
-    longDescription: 'Engineered with React, Vite, and custom CSS design tokens. Features webgl canvas shaders, dark-mode glass panel aesthetics, and dynamic page state management.',
-    tags: ['React.js', 'Vite', 'Tailwind CSS', 'WebGL', 'Framer Motion'],
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-41552-large.mp4',
-    githubUrl: 'https://github.com/Mugilan-md',
-    liveUrl: '#hero',
+    description: 'Premium event portal with dynamic seat allocation, UPI QR payment auditing, base64 receipt uploads, and QR entry ticket passes with EmailJS dispatch.',
+    longDescription: 'Built with React & Vite, this serverless event platform streamlines registration with real-time seat reservation, automated UPI QR payment receipt auditing, base64 image processing, instant QR ticket generation, EmailJS notification dispatching, and a protected admin CRUD dashboard with Excel exports.',
+    tags: ['JavaScript', 'React.js', 'Vite', 'Tailwind CSS', 'EmailJS', 'Serverless'],
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-with-green-screen-41220-large.mp4',
+    githubUrl: 'https://github.com/Mugilan-md/Event-portal',
+    liveUrl: 'https://event-portal-tan.vercel.app',
     featured: false,
   },
   {
     id: 4,
-    title: 'Pulse Cloud Telemetry Suite',
-    category: 'ai',
-    categoryLabel: 'AI & Cloud',
-    description: 'Distributed microservices telemetry portal providing real-time server health monitoring and automated anomaly detection.',
-    longDescription: 'Combines Node.js backend microservices, MongoDB time-series indexing, and WebSocket live channels to display server throughput, memory spikes, and latency alerts across multi-region deployments.',
-    tags: ['Node.js', 'Express', 'MongoDB', 'Docker', 'WebSockets'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop',
+    title: 'Smart Civic Issue Reporting System',
+    category: 'fullstack',
+    categoryLabel: 'Full-Stack App',
+    description: 'Full-stack civic issue reporting SaaS web app for logging potholes, garbage, and water issues with geolocation, photo uploads, and admin tracking dashboard.',
+    longDescription: 'Empowers citizens to report municipal infrastructure issues in real-time. Built on a Node.js & Express REST API with MongoDB persistence, geolocation tagging, image attachments, and a clean administrative SaaS dashboard for tracking and updating complaint resolution statuses.',
+    tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'SaaS UI'],
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-code-coding-on-a-computer-screen-41551-large.mp4',
-    githubUrl: 'https://github.com/Mugilan-md',
-    liveUrl: '#hero',
+    githubUrl: 'https://github.com/Mugilan-md/Smart-Civic-Issue-System',
+    liveUrl: 'https://smart-civic-issue-system.vercel.app',
     featured: false,
   },
 ];
@@ -90,56 +89,40 @@ export default function Projects() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-          <div className="space-y-4 max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 shadow-sm text-xs font-mono font-bold tracking-widest text-[#FF2A2A] uppercase"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-[#FF2A2A]" />
-              <span>// Selected Works '26</span>
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl sm:text-6xl font-black font-['Outfit'] tracking-tight text-black uppercase leading-tight"
-            >
-              Featured Works & Showcase
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-neutral-600 text-lg font-['Inter'] leading-relaxed"
-            >
-              A curated lineup of production-ready full-stack applications, video reels, and interactive digital products built for scale and luxury UX.
-            </motion.p>
-          </div>
-
-          {/* Filter Category Tabs */}
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-6 md:space-y-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap gap-2 self-start md:self-end"
+            transition={{ duration: 0.6 }}
+            className="space-y-3"
+          >
+            <div className="inline-flex items-center space-x-2 text-xs font-mono tracking-widest text-[#FF2A2A] uppercase font-bold">
+              <Sparkles className="w-4 h-4 text-[#FF2A2A]" />
+              <span>Selected Works // 2026</span>
+            </div>
+            <h2 className="text-4xl sm:text-6xl font-black font-['Outfit'] tracking-tight uppercase leading-none">
+              Featured <span className="text-stroke-black text-transparent">Projects</span>
+            </h2>
+          </motion.div>
+
+          {/* Category Filter Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-wrap gap-2"
           >
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-full text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
                   activeCategory === cat.id
-                    ? 'bg-[#FF2A2A] text-white shadow-md shadow-[#FF2A2A]/30 scale-105'
-                    : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-black'
+                    ? 'bg-black text-white font-bold shadow-lg scale-105'
+                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-black'
                 }`}
               >
                 {cat.label}
@@ -149,115 +132,115 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <AnimatePresence mode="popLayout">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <AnimatePresence>
             {filteredProjects.map((project, idx) => (
               <motion.div
                 key={project.id}
                 layout
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative bg-white border border-neutral-200 rounded-3xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_50px_rgba(255,42,42,0.18)] transition-all duration-500 flex flex-col justify-between"
+                className="group relative bg-zinc-950 text-white rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl flex flex-col justify-between hover:border-[#FF2A2A] transition-colors duration-500"
               >
-                {/* Media Card Container */}
-                <div
-                  onClick={() => setSelectedProject(project)}
-                  className="relative aspect-video w-full overflow-hidden bg-neutral-900 cursor-pointer group/media"
-                >
+                {/* Project Image & Video Overlay */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover/media:scale-105 group-hover/media:opacity-90"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover/media:opacity-80 transition-opacity duration-300" />
 
-                  {/* Category Pill Tag */}
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono font-bold tracking-wider uppercase">
-                    {project.categoryLabel}
+                  {/* Gradient Mask */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-90" />
+
+                  {/* Category Badge Top Left */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono tracking-widest uppercase text-white font-bold">
+                      {project.categoryLabel}
+                    </span>
                   </div>
 
-                  {/* Hover Play / View Details Overlay Button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/media:opacity-100 transition-all duration-300 scale-90 group-hover/media:scale-100">
-                    <div className="w-16 h-16 rounded-full bg-[#FF2A2A] text-white flex items-center justify-center shadow-xl transform transition-transform group-hover/media:scale-110">
-                      <Play className="w-7 h-7 fill-white translate-x-0.5" />
-                    </div>
-                  </div>
+                  {/* Quick Video Preview Lightbox Button */}
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#FF2A2A] text-white flex items-center justify-center shadow-2xl opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 z-20 cursor-pointer"
+                    title="View Project Demo"
+                  >
+                    <Play className="w-6 h-6 fill-white translate-x-0.5" />
+                  </button>
                 </div>
 
-                {/* Content Container */}
-                <div className="p-8 flex flex-col justify-between flex-grow space-y-6">
+                {/* Content Details */}
+                <div className="p-6 sm:p-8 flex flex-col justify-between flex-grow space-y-6">
                   <div className="space-y-3">
-                    <div className="flex justify-between items-start">
-                      <h3
-                        onClick={() => setSelectedProject(project)}
-                        className="text-2xl sm:text-3xl font-black font-['Outfit'] tracking-tight text-black hover:text-[#FF2A2A] transition-colors cursor-pointer"
-                      >
-                        {project.title}
-                      </h3>
-                      <button
-                        onClick={() => setSelectedProject(project)}
-                        aria-label="View Project"
-                        className="p-2 rounded-full bg-neutral-100 hover:bg-[#FF2A2A] hover:text-white transition-colors group/btn"
-                      >
-                        <ArrowUpRight className="w-5 h-5 text-neutral-700 group-hover/btn:text-white transition-colors" />
-                      </button>
-                    </div>
-
-                    <p className="text-neutral-600 font-['Inter'] text-sm sm:text-base leading-relaxed">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold font-['Outfit'] uppercase tracking-tight text-white group-hover:text-[#FF2A2A] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-zinc-400 font-normal leading-relaxed font-['Inter']">
                       {project.description}
                     </p>
                   </div>
 
-                  {/* Tech Badges */}
-                  <div className="pt-4 border-t border-neutral-100 flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-700 font-mono text-[11px] font-semibold"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  {/* Tech Stack Tags */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
+                  {/* Card Links Footer */}
+                  <div className="pt-4 border-t border-zinc-900 flex items-center justify-between gap-4">
                     <div className="flex items-center space-x-3">
                       <a
                         href={project.githubUrl}
                         target="_blank"
-                        rel="noreferrer"
-                        className="p-2 rounded-full text-neutral-600 hover:text-black hover:bg-neutral-100 transition-colors"
-                        title="GitHub Repository"
+                        rel="noopener noreferrer"
+                        className="p-2.5 rounded-full bg-zinc-900 hover:bg-[#FF2A2A] text-white transition-colors"
+                        title="View GitHub Repository"
                       >
                         <Github className="w-4 h-4" />
                       </a>
                       <a
                         href={project.liveUrl}
-                        className="p-2 rounded-full text-neutral-600 hover:text-[#FF2A2A] hover:bg-neutral-100 transition-colors"
-                        title="Live Preview"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2.5 rounded-full bg-zinc-900 hover:bg-[#FF2A2A] text-white transition-colors"
+                        title="Open Live Deployment"
                       >
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     </div>
+
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="inline-flex items-center space-x-1.5 text-xs font-mono tracking-widest text-[#FF2A2A] font-bold uppercase hover:underline"
+                    >
+                      <span>Explore Case Study</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
-
       </div>
 
-      {/* Lightbox / Video Project Detail Modal */}
+      {/* Project Lightbox Modal */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/90 backdrop-blur-xl"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-12 bg-black/95 backdrop-blur-2xl"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
@@ -265,78 +248,82 @@ export default function Projects() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 30 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl bg-[#111111] text-white rounded-3xl overflow-hidden border border-white/20 shadow-2xl"
+              className="relative w-full max-w-4xl bg-zinc-950 text-white rounded-3xl overflow-hidden border border-zinc-800 shadow-[0_0_80px_rgba(255,42,42,0.3)] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-20 p-3 rounded-full bg-black/70 text-white hover:bg-[#FF2A2A] transition-colors"
-              >
-                <X className="w-6 h-6" />
-              </button>
+              {/* Modal Header */}
+              <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-zinc-900/50">
+                <div>
+                  <span className="text-[10px] font-mono tracking-widest text-[#FF2A2A] uppercase font-bold">
+                    {selectedProject.categoryLabel}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black font-['Outfit'] uppercase tracking-tight text-white">
+                    {selectedProject.title}
+                  </h3>
+                </div>
 
-              {/* Video Player */}
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="p-2.5 rounded-full bg-zinc-800 hover:bg-[#FF2A2A] text-white transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Modal Media Preview */}
               <div className="relative aspect-video w-full bg-black overflow-hidden">
                 <video
                   src={selectedProject.videoUrl}
                   controls
                   autoPlay
-                  playsInline
                   className="w-full h-full object-cover"
                 />
               </div>
 
-              {/* Modal Details */}
-              <div className="p-6 sm:p-8 space-y-6">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div>
-                    <span className="text-xs font-mono text-[#FF2A2A] uppercase font-bold tracking-widest">
-                      {selectedProject.categoryLabel}
-                    </span>
-                    <h3 className="text-3xl sm:text-4xl font-black font-['Outfit'] tracking-tight text-white mt-1">
-                      {selectedProject.title}
-                    </h3>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <a
-                      href={selectedProject.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center space-x-2 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      <span>Code Repo</span>
-                    </a>
-                    <a
-                      href={selectedProject.liveUrl}
-                      className="px-5 py-2.5 rounded-full bg-[#FF2A2A] hover:bg-white hover:text-black text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center space-x-2 transition-colors shadow-lg shadow-[#FF2A2A]/40"
-                    >
-                      <span>Live Site</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-
-                <p className="text-neutral-300 font-['Inter'] text-base leading-relaxed">
+              {/* Modal Body */}
+              <div className="p-6 sm:p-8 space-y-6 max-h-[40vh] overflow-y-auto">
+                <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-['Inter']">
                   {selectedProject.longDescription}
                 </p>
 
-                {/* Tech Stack List */}
-                <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-mono text-neutral-400 font-bold uppercase tracking-wider mr-2">
-                    Technologies Used:
-                  </span>
-                  {selectedProject.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 rounded-md bg-white/10 text-white font-mono text-xs border border-white/10"
-                    >
-                      {t}
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tags.map((tag, idx) => (
+                    <span key={idx} className="px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300">
+                      {tag}
                     </span>
                   ))}
                 </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-6 border-t border-zinc-800 bg-zinc-900/50 flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center space-x-4">
+                  <a
+                    href={selectedProject.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-full bg-zinc-800 hover:bg-white hover:text-black text-white font-mono text-xs uppercase font-bold transition-all flex items-center space-x-2"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>View Repository</span>
+                  </a>
+                  <a
+                    href={selectedProject.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-full bg-[#FF2A2A] text-white hover:bg-white hover:text-black font-mono text-xs uppercase font-bold transition-all flex items-center space-x-2 shadow-lg"
+                  >
+                    <span>Launch Live Demo</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="text-xs font-mono text-zinc-400 hover:text-white uppercase"
+                >
+                  Close Preview
+                </button>
               </div>
             </motion.div>
           </motion.div>
