@@ -44,11 +44,11 @@ export default function Hero() {
   return (
     <section id="hero" className="relative w-full h-screen min-h-[720px] bg-black text-white overflow-hidden flex items-center justify-center">
       
-      {/* 1. CINEMATIC FULLSCREEN BACKGROUND VIDEO */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none transform-gpu">
+      {/* 1. HIGH-QUALITY SHARP CINEMATIC BACKGROUND VIDEO */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none transform-gpu translate-z-0">
         <video
           ref={bgVideoRef}
-          className="w-full h-full object-cover object-center transform-gpu"
+          className="w-full h-full object-cover object-[center_top] sm:object-center transform-gpu image-rendering-crisp"
           playsInline
           controls={false}
           autoPlay={false}
@@ -61,8 +61,8 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* 2. CINEMATIC OVERLAY & RADIAL VIGNETTE FOR 100% TEXT CONTRAST */}
-      <div className="absolute inset-0 z-1 pointer-events-none bg-black/55 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.4)_50%,_rgba(0,0,0,0.85)_100%)] backdrop-blur-[2px]" />
+      {/* 2. LIGHTENED OVERLAY (rgba(0,0,0,0.28)) FOR MAXIMUM VIDEO VISIBILITY */}
+      <div className="absolute inset-0 z-1 pointer-events-none bg-[rgba(0,0,0,0.28)] bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(0,0,0,0.45)_100%)] backdrop-blur-[1px]" />
 
       {/* 3. MAIN CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full h-full flex flex-col justify-between pt-24 pb-8">
@@ -88,13 +88,13 @@ export default function Hero() {
               <span>Full Stack Portfolio '26</span>
             </motion.div>
 
-            {/* Main Headline */}
-            <div className="space-y-2">
+            {/* Main Headline (20-25% Smaller for Optimal Balance) */}
+            <div className="space-y-1">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#FFFFFF] font-['Outfit'] tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]"
+                className="text-2xl sm:text-4xl lg:text-[4rem] font-extrabold text-[#FFFFFF] font-['Outfit'] tracking-tight leading-snug drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]"
               >
                 Hi, I'm a
               </motion.h2>
@@ -102,7 +102,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.7 }}
-                className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black font-['Outfit'] tracking-tighter uppercase leading-none text-[#FFFFFF] drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)]"
+                className="text-3xl sm:text-5xl lg:text-[5.5rem] xl:text-[5.8rem] font-black font-['Outfit'] tracking-tighter uppercase leading-none text-[#FFFFFF] drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)]"
               >
                 Full Stack Developer
               </motion.h1>
@@ -113,7 +113,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
-              className="text-lg sm:text-xl text-white/95 max-w-xl font-normal leading-relaxed font-['Inter'] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+              className="text-base sm:text-lg text-white/95 max-w-xl font-normal leading-relaxed font-['Inter'] drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
             >
               Crafting high-performance, scalable web applications with <span className="text-white font-bold underline decoration-[#FF2A2A] underline-offset-4">React.js</span>, <span className="text-white font-bold underline decoration-[#FF2A2A] underline-offset-4">Node.js</span>, and <span className="text-white font-bold underline decoration-[#FF2A2A] underline-offset-4">Tailwind CSS</span>. Blending luxury aesthetics with award-winning speed.
             </motion.p>

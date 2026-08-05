@@ -79,17 +79,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right Side: Hire Me CTA Button (Desktop) */}
-          <div className="hidden md:flex items-center">
-            <button
-              onClick={triggerHireMeEffect}
-              className="relative group px-6 py-2.5 rounded-full glass-button text-sm font-semibold text-white tracking-wide overflow-hidden transition-all duration-300 hover:border-[#FF2A2A] hover:shadow-[0_0_25px_rgba(255,42,42,0.4)] hover:scale-105 flex items-center space-x-2"
-            >
-              <span>Hire Me</span>
-              <ArrowUpRight className="w-4 h-4 text-[#FF2A2A] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </button>
-          </div>
-
           {/* Mobile Hamburger Button */}
           <div className="md:hidden flex items-center">
             <button
