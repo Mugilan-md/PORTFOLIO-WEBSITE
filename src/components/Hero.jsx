@@ -44,11 +44,11 @@ export default function Hero() {
   return (
     <section id="hero" className="relative w-full h-screen min-h-[720px] bg-black text-white overflow-hidden flex items-center justify-center">
       
-      {/* 1. HIGH-QUALITY SHARP CINEMATIC BACKGROUND VIDEO */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none transform-gpu translate-z-0">
+      {/* 1. NATIVE RESOLUTION CRISP HARDWARE-ACCELERATED BACKGROUND VIDEO */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none transform-gpu translate-z-0 backface-hidden">
         <video
           ref={bgVideoRef}
-          className="w-full h-full object-cover object-[center_top] sm:object-center transform-gpu image-rendering-crisp"
+          className="w-full h-full object-cover object-[center_35%] sm:object-center transform-gpu"
           playsInline
           controls={false}
           autoPlay={false}
@@ -88,13 +88,13 @@ export default function Hero() {
               <span>Full Stack Portfolio '26</span>
             </motion.div>
 
-            {/* Main Headline (20-25% Smaller for Optimal Balance) */}
+            {/* Main Headline (Optimized Typography: ~10% smaller for "Hi, I'm a" and ~12-15% smaller for "FULL STACK DEVELOPER") */}
             <div className="space-y-1">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                className="text-2xl sm:text-4xl lg:text-[4rem] font-extrabold text-[#FFFFFF] font-['Outfit'] tracking-tight leading-snug drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]"
+                className="text-2xl sm:text-3xl lg:text-[3.5rem] font-extrabold text-[#FFFFFF] font-['Outfit'] tracking-tight leading-snug drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]"
               >
                 Hi, I'm a
               </motion.h2>
@@ -102,7 +102,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.7 }}
-                className="text-3xl sm:text-5xl lg:text-[5.5rem] xl:text-[5.8rem] font-black font-['Outfit'] tracking-tighter uppercase leading-none text-[#FFFFFF] drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)]"
+                className="text-3xl sm:text-5xl lg:text-[4.8rem] xl:text-[5.0rem] font-black font-['Outfit'] tracking-tighter uppercase leading-none text-[#FFFFFF] drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)]"
               >
                 Full Stack Developer
               </motion.h1>
