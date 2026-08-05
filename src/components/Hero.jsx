@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none transform-gpu translate-z-0 backface-hidden">
         <video
           ref={bgVideoRef}
-          className="w-full h-full object-cover object-[58%_35%] sm:object-[58%_30%] lg:object-[57%_25%] transform-gpu"
+          className="w-full h-full object-cover object-[50%_22%] md:object-[54%_25%] lg:object-[57%_25%] xl:object-[58%_25%] transition-[object-position] duration-500 ease-out transform-gpu"
           playsInline
           controls={false}
           autoPlay={false}
