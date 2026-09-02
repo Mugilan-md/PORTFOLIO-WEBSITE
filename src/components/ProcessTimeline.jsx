@@ -41,6 +41,15 @@ const steps = [
   },
 ];
 
+// Full continuous curve for smooth mask reveal
+const fullPathD = "M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600";
+
+// Continuous (solid) segments: path leaving each card (first half of each bezier curve)
+const continuousPathD = "M 500 0 C 500 20, 562.5 35, 625 57.5 M 750 160 C 750 240, 625 295, 500 352.5 M 250 560 C 250 640, 375 695, 500 752.5 M 750 960 C 750 1040, 625 1095, 500 1152.5 M 250 1360 C 250 1420, 312.5 1465, 375 1502.5";
+
+// Stripped (dashed) segments: path entering each card (second half of each bezier curve)
+const strippedPathD = "M 625 57.5 C 687.5 80, 750 110, 750 160 M 500 352.5 C 375 410, 250 470, 250 560 M 500 752.5 C 625 810, 750 870, 750 960 M 500 1152.5 C 375 1210, 250 1270, 250 1360 M 375 1502.5 C 437.5 1540, 500 1570, 500 1600";
+
 export default function ProcessTimeline() {
   const containerRef = useRef(null);
 
@@ -123,7 +132,7 @@ export default function ProcessTimeline() {
       {/* Main Timeline Section */}
       <div className="max-w-6xl mx-auto px-6 relative min-h-[1100px]">
         
-        {/* SVG Curved Dashed S-Curve Path (Desktop & Tablet) */}
+        {/* SVG Curved S-Curve Path (Desktop & Tablet): Half Continuous leaving card, Half Stripped entering next card */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
           <svg
             className="w-full h-full"
@@ -132,12 +141,12 @@ export default function ProcessTimeline() {
             preserveAspectRatio="none"
           >
             <defs>
-              {/* Mask: Animated solid white stroke that progressively unmasks the red dashed path */}
+              {/* Mask: Animated solid white stroke that progressively unmasks the path */}
               <mask id="process-path-mask" maskUnits="userSpaceOnUse">
                 <motion.path
-                  d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
+                  d={fullPathD}
                   stroke="#ffffff"
-                  strokeWidth="12"
+                  strokeWidth="16"
                   strokeLinecap="round"
                   fill="none"
                   style={{ pathLength }}
@@ -145,24 +154,39 @@ export default function ProcessTimeline() {
               </mask>
             </defs>
 
-            {/* Background static dashed guide line */}
+            {/* Background static continuous guide lines (leaving cards) */}
             <path
-              d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
+              d={continuousPathD}
+              stroke="#e5e5e5"
+              strokeWidth="4"
+              fill="none"
+            />
+
+            {/* Background static stripped/dashed guide lines (entering next card) */}
+            <path
+              d={strippedPathD}
               stroke="#e5e5e5"
               strokeWidth="4"
               strokeDasharray="12 12"
               fill="none"
             />
 
-            {/* Scroll-driven red dashed line that exactly matches the stripped path */}
-            <path
-              d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
-              stroke="#FF2A2A"
-              strokeWidth="6"
-              strokeDasharray="12 12"
-              fill="none"
-              mask="url(#process-path-mask)"
-            />
+            {/* Scroll-driven animated red path: continuous when leaving card, stripped when entering card */}
+            <g mask="url(#process-path-mask)">
+              <path
+                d={continuousPathD}
+                stroke="#FF2A2A"
+                strokeWidth="6"
+                fill="none"
+              />
+              <path
+                d={strippedPathD}
+                stroke="#FF2A2A"
+                strokeWidth="6"
+                strokeDasharray="12 12"
+                fill="none"
+              />
+            </g>
 
             {/* Glowing Accent Connector Nodes at each Card position */}
             <circle cx="750" cy="160" r="8" fill="#FF2A2A" />
