@@ -131,21 +131,37 @@ export default function ProcessTimeline() {
             fill="none"
             preserveAspectRatio="none"
           >
+            <defs>
+              {/* Mask: Animated solid white stroke that progressively unmasks the red dashed path */}
+              <mask id="process-path-mask" maskUnits="userSpaceOnUse">
+                <motion.path
+                  d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
+                  stroke="#ffffff"
+                  strokeWidth="12"
+                  strokeLinecap="round"
+                  fill="none"
+                  style={{ pathLength }}
+                />
+              </mask>
+            </defs>
+
             {/* Background static dashed guide line */}
             <path
               d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
               stroke="#e5e5e5"
               strokeWidth="4"
               strokeDasharray="12 12"
+              fill="none"
             />
 
-            {/* Scroll-driven animated red stroke line */}
-            <motion.path
+            {/* Scroll-driven red dashed line that exactly matches the stripped path */}
+            <path
               d="M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600"
               stroke="#FF2A2A"
               strokeWidth="6"
               strokeDasharray="12 12"
-              style={{ pathLength }}
+              fill="none"
+              mask="url(#process-path-mask)"
             />
 
             {/* Glowing Accent Connector Nodes at each Card position */}
