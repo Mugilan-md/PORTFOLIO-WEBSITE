@@ -45,10 +45,10 @@ const steps = [
 const fullPathD = "M 500 0 C 500 40, 750 60, 750 160 C 750 320, 250 380, 250 560 C 250 720, 750 780, 750 960 C 750 1120, 250 1180, 250 1360 C 250 1480, 500 1540, 500 1600";
 
 // Continuous (solid) segments: path leaving each card (first half of each bezier curve)
-const continuousPathD = "M 500 0 C 500 20, 562.5 35, 625 57.5 M 750 160 C 750 240, 625 295, 500 352.5 M 250 560 C 250 640, 375 695, 500 752.5 M 750 960 C 750 1040, 625 1095, 500 1152.5 M 250 1360 C 250 1420, 312.5 1465, 375 1502.5";
+const continuousPathD = "M 500 0 C 500 28, 622.5 46.2, 696 88.9 M 750 160 C 750 272, 505 335, 358 424.5 M 250 560 C 250 672, 495 735, 642 824.5 M 750 960 C 750 1072, 505 1135, 358 1224.5 M 250 1360 C 250 1444, 372.5 1498.6, 446 1544.4";
 
 // Stripped (dashed) segments: path entering each card (second half of each bezier curve)
-const strippedPathD = "M 625 57.5 C 687.5 80, 750 110, 750 160 M 500 352.5 C 375 410, 250 470, 250 560 M 500 752.5 C 625 810, 750 870, 750 960 M 500 1152.5 C 375 1210, 250 1270, 250 1360 M 375 1502.5 C 437.5 1540, 500 1570, 500 1600";
+const strippedPathD = "M 696 88.9 C 727.5 107.2, 750 130, 750 160 M 358 424.5 C 295 462.8, 250 506, 250 560 M 642 824.5 C 705 862.8, 750 906, 750 960 M 358 1224.5 C 295 1262.8, 250 1306, 250 1360 M 446 1544.4 C 477.5 1564, 500 1582, 500 1600";
 
 export default function ProcessTimeline() {
   const containerRef = useRef(null);
