@@ -175,13 +175,13 @@ export default function ProcessTimeline() {
             <g mask="url(#process-path-mask)">
               <path
                 d={continuousPathD}
-                stroke="#FF2A2A"
+                stroke="#000000"
                 strokeWidth="6"
                 fill="none"
               />
               <path
                 d={strippedPathD}
-                stroke="#FF2A2A"
+                stroke="#000000"
                 strokeWidth="6"
                 strokeDasharray="12 12"
                 fill="none"
@@ -189,15 +189,15 @@ export default function ProcessTimeline() {
             </g>
 
             {/* Glowing Accent Connector Nodes at each Card position */}
-            <circle cx="750" cy="160" r="8" fill="#FF2A2A" />
-            <circle cx="250" cy="560" r="8" fill="#FF2A2A" />
-            <circle cx="750" cy="960" r="8" fill="#FF2A2A" />
-            <circle cx="250" cy="1360" r="8" fill="#FF2A2A" />
+            <circle cx="750" cy="160" r="8" fill="#000000" />
+            <circle cx="250" cy="560" r="8" fill="#000000" />
+            <circle cx="750" cy="960" r="8" fill="#000000" />
+            <circle cx="250" cy="1360" r="8" fill="#000000" />
           </svg>
         </div>
 
         {/* Mobile Vertical Dashed Line */}
-        <div className="absolute top-0 bottom-0 left-8 md:hidden w-1 bg-neutral-200 border-r-2 border-dashed border-[#FF2A2A] pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-8 md:hidden w-1 bg-neutral-200 border-r-2 border-dashed border-black pointer-events-none" />
 
         {/* Process Tag Cards */}
         <div className="space-y-24 md:space-y-36 relative z-10 pt-10">
